@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us | WanderWorld Travel</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav class="main-nav" aria-label="Main Navigation">
+    <div class="nav-inner">
+      <a href="index.html" class="logo">Discover<span>World</span></a>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="destinations.html">Destinations</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="tips.html">Travel Tips</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="page-wrapper">
+
+    <div class="page-title">
+      <h1>Contact Us</h1>
+      <p class="subtitle">Have questions or ready to start planning? We'd love to hear from you.</p>
+    </div>
+
+    <div class="contact-layout">
+
+      <!-- CONTACT FORM -->
+      <div class="contact-form">
+        <h2>Send Us a Message</h2>
+        <p style="font-size:.9rem; color:var(--gray); margin-bottom:1.5rem;">Fields marked with <span style="color:var(--accent2);">*</span> are required.</p>
+
+        <div class="form-group">
+          <label for="fullName">Full Name <span style="color:var(--accent2);">*</span></label>
+          <input type="text" id="fullName" name="fullName" placeholder="e.g. Jane Doe" autocomplete="name" />
+          <span class="error-msg" id="nameError">Please enter your full name (at least 2 characters).</span>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address <span style="color:var(--accent2);">*</span></label>
+          <input type="email" id="email" name="email" placeholder="e.g. jane@example.com" autocomplete="email" />
+          <span class="error-msg" id="emailError">Please enter a valid email address.</span>
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" placeholder="e.g. +977-9841234567" autocomplete="tel" />
+          <span class="error-msg" id="phoneError">Please enter a valid phone number (digits, +, - allowed).</span>
+        </div>
+
+        <div class="form-group">
+          <label for="destination">Destination of Interest <span style="color:var(--accent2);">*</span></label>
+          <select id="destination" name="destination">
+            <option value="">-- Select a destination --</option>
+            <option value="europe">Europe</option>
+            <option value="asia">Asia</option>
+            <option value="americas">Americas</option>
+            <option value="africa">Africa</option>
+            <option value="oceania">Oceania &amp; Pacific</option>
+            <option value="custom">Custom / Not Sure Yet</option>
+          </select>
+          <span class="error-msg" id="destError">Please select a destination.</span>
+        </div>
+
+        <div class="form-group">
+          <label for="travelDate">Planned Travel Date <span style="color:var(--accent2);">*</span></label>
+          <input type="date" id="travelDate" name="travelDate" />
+          <span class="error-msg" id="dateError">Please select a future travel date.</span>
+        </div>
+
+        <div class="form-group">
+          <label for="travelers">Number of Travelers <span style="color:var(--accent2);">*</span></label>
+          <select id="travelers" name="travelers">
+            <option value="">-- Select --</option>
+            <option value="1">1 (Solo)</option>
+            <option value="2">2 (Couple)</option>
+            <option value="3-5">3–5 (Small Group)</option>
+            <option value="6-10">6–10 (Group)</option>
+            <option value="10+">10+ (Large Group)</option>
+          </select>
+          <span class="error-msg" id="travelersError">Please select number of travelers.</span>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Your Message <span style="color:var(--accent2);">*</span></label>
+          <textarea id="message" name="message" placeholder="Tell us about your dream trip, any special requirements, budget range, etc."></textarea>
+          <span class="error-msg" id="messageError">Please enter a message (at least 20 characters).</span>
+        </div>
+
+        <button type="button" class="form-submit" onclick="validateAndSubmit()">Send My Enquiry ✈</button>
+        <div class="success-msg" id="successMsg">
+          ✅ Thank you! Your enquiry has been received. We'll get back to you within 24 hours at the email provided.
+        </div>
+      </div>
+
+      <!-- CONTACT INFO SIDEBAR -->
+      <div>
+        <div class="highlight-box">
+          <h2>Get in Touch</h2>
+          <p><strong>📍 Office Address</strong><br />123 Explorer Avenue, Thamel<br />Kathmandu 44600, Nepal</p>
+          <p style="margin-top:1rem;"><strong>📞 Phone</strong><br />+977-1-4123456<br />+977-9841234567 (WhatsApp)</p>
+          <p style="margin-top:1rem;"><strong>✉ Email</strong><br />
+            <a href="mailto:info@wanderworld.com" style="color:var(--accent);">info@wanderworld.com</a><br />
+            <a href="mailto:bookings@wanderworld.com" style="color:var(--accent);">bookings@wanderworld.com</a>
+          </p>
+          <p style="margin-top:1rem;"><strong>🕐 Office Hours</strong><br />
+            Sunday – Friday: 9:00 AM – 6:00 PM<br />
+            Saturday: 10:00 AM – 4:00 PM
+          </p>
+        </div>
+
+        <div style="background:var(--white); border-radius:10px; padding:1.5rem; box-shadow:0 2px 10px rgba(0,0,0,.1); margin-top:1.5rem;">
+          <h3 style="margin-bottom:1rem;">Why Contact Us?</h3>
+          <ul style="list-style:none; display:flex; flex-direction:column; gap:.7rem;">
+            <li>✅ <strong>Free consultation</strong> — no obligation</li>
+            <li>✅ <strong>Custom itineraries</strong> tailored to you</li>
+            <li>✅ <strong>Best price guarantee</strong> on all packages</li>
+            <li>✅ <strong>24/7 support</strong> during your trip</li>
+            <li>✅ Response within <strong>24 hours</strong></li>
+          </ul>
+        </div>
+
+        <!-- External useful link with blank target -->
+        <div style="margin-top:1.5rem; padding:1rem; background:#fff8ec; border-radius:8px; border:1px solid #f0d090;">
+          <p style="font-size:.88rem; color:var(--gray); margin:0;">
+            💡 <strong>Tip:</strong> Check visa requirements before contacting us at
+            <a href="https://www.iatatravelcentre.com" target="_blank" rel="noopener">IATA Travel Centre</a>
+            (opens in new window).
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- FAQ Table -->
+    <section class="section" style="margin-top:3rem;">
+      <h2>Frequently Asked Questions</h2>
+      <details>
+        <summary>How far in advance should I book?</summary>
+        <p>We recommend booking at least 3–6 months in advance for peak season travel and popular destinations. For off-peak times, 4–8 weeks is usually sufficient. Contact us and we'll advise you based on your specific destination.</p>
+      </details>
+      <details>
+        <summary>Do your packages include flights?</summary>
+        <p>Most of our packages are land-only (accommodation, transfers, tours). We can arrange flights for you as an add-on. We work with major airlines to find the best fares and will include all flight costs transparently in your quote.</p>
+      </details>
+      <details>
+        <summary>What payment methods do you accept?</summary>
+        <p>We accept bank transfers, credit/debit cards (Visa, Mastercard), and PayPal. A 30% deposit secures your booking, with the balance due 60 days before departure.</p>
+      </details>
+      <details>
+        <summary>What is your cancellation policy?</summary>
+        <p>Cancellations 90+ days before departure receive a full refund minus a $100 admin fee. 60–89 days: 75% refund. 30–59 days: 50% refund. Under 30 days: no refund. We strongly recommend travel insurance.</p>
+      </details>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-col">
+        <h4>WanderWorld Travel</h4>
+        <p>123 Explorer Avenue<br />Thamel, Kathmandu 44600<br />Nepal</p>
+        <p style="margin-top:.5rem;">✉ <a href="mailto:info@wanderworld.com">info@wanderworld.com</a></p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="destinations.html">Destinations</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="tips.html">Travel Tips</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>External Resources</h4>
+        <a href="https://www.iatatravelcentre.com" target="_blank" rel="noopener">IATA Visa Check</a>
+        <a href="https://www.tripadvisor.com" target="_blank" rel="noopener">TripAdvisor</a>
+        <a href="https://www.skyscanner.com" target="_blank" rel="noopener">Skyscanner Flights</a>
+      </div>
+    </div>
+    <div class="footer-secondary-nav">
+      <a href="index.html">Home</a> |
+      <a href="destinations.html">Destinations</a> |
+      <a href="gallery.html">Gallery</a> |
+      <a href="tips.html">Tips</a> |
+      <a href="about.html">About</a> |
+      <a href="contact.html">Contact</a>
+      <p class="footer-copy">&copy; 2026 WanderWorld Travel. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- ========== FORM VALIDATION JS ========== -->
+  <script>
+    function showError(id, show) {
+      const el = document.getElementById(id);
+      if (show) el.classList.add('show');
+      else el.classList.remove('show');
+    }
+
+    function validateAndSubmit() {
+      let isValid = true;
+
+      // Full Name
+      const name = document.getElementById('fullName').value.trim();
+      if (name.length < 2) { showError('nameError', true); isValid = false; }
+      else showError('nameError', false);
+
+      // Email — basic regex
+      const email = document.getElementById('email').value.trim();
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) { showError('emailError', true); isValid = false; }
+      else showError('emailError', false);
+
+      // Phone — optional but if filled, must be valid chars
+      const phone = document.getElementById('phone').value.trim();
+      if (phone !== '') {
+        const phoneRegex = /^[\d\s\+\-\(\)]{7,20}$/;
+        if (!phoneRegex.test(phone)) { showError('phoneError', true); isValid = false; }
+        else showError('phoneError', false);
+      } else showError('phoneError', false);
+
+      // Destination
+      const dest = document.getElementById('destination').value;
+      if (!dest) { showError('destError', true); isValid = false; }
+      else showError('destError', false);
+
+      // Travel Date — must be in the future
+      const dateVal = document.getElementById('travelDate').value;
+      if (!dateVal) { showError('dateError', true); isValid = false; }
+      else {
+        const selectedDate = new Date(dateVal);
+        const today = new Date();
+        today.setHours(0,0,0,0);
+        if (selectedDate < today) { showError('dateError', true); isValid = false; }
+        else showError('dateError', false);
+      }
+
+      // Travelers
+      const travelers = document.getElementById('travelers').value;
+      if (!travelers) { showError('travelersError', true); isValid = false; }
+      else showError('travelersError', false);
+
+      // Message
+      const msg = document.getElementById('message').value.trim();
+      if (msg.length < 20) { showError('messageError', true); isValid = false; }
+      else showError('messageError', false);
+
+      // If all valid, show success
+      if (isValid) {
+        document.getElementById('successMsg').classList.add('show');
+        // Clear form
+        ['fullName','email','phone','destination','travelDate','travelers','message'].forEach(id => {
+          const el = document.getElementById(id);
+          if (el.tagName === 'SELECT') el.selectedIndex = 0;
+          else el.value = '';
+        });
+        window.scrollTo({ top: document.querySelector('.form-submit').offsetTop, behavior: 'smooth' });
+      }
+    }
+
+    // Set minimum date to today
+    document.addEventListener('DOMContentLoaded', () => {
+      const today = new Date().toISOString().split('T')[0];
+      document.getElementById('travelDate').setAttribute('min', today);
+    });
+  </script>
+
+</body>
+</html>
